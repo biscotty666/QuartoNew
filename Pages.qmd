@@ -1,0 +1,37 @@
+---
+title: "Logo"
+format: 
+  dashboard:
+    logo: images/beetle.svg
+    nav-buttons: 
+      - icon: github
+        href: https://github.com/biscotty666/QuartoNew
+        aria-label: GitHub
+---
+
+```{r}
+library(ggplot2)
+```
+
+# {.sidebar}
+
+Here is some information about everything that I want on every page
+
+# Scatter
+
+```{r}
+#| title: Highway vs. city mileage
+
+ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+```
+
+# Bar
+
+```{r}
+#| title: Drive types
+
+ggplot(mpg, aes(x = drv)) +
+  geom_bar()
+```
+

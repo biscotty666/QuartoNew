@@ -52,12 +52,14 @@
             rnaturalearthdata
             quarto
             osmdata
+            paletteer
             viridis
             usethis
             tmap
             tidycensus
             plotly
             geodata
+            nord
             prettymapr
             ggspatial
             tidyterra
@@ -117,7 +119,7 @@
         '';
 
         shellHook = ''
-            export BROWSER=brave
+            export BROWSER=firefox
                 # Tells pip to put packages into $PIP_PREFIX instead of the usual locations.
     # See https://pip.pypa.io/en/stable/user_guide/#environment-variables.
             export PIP_PREFIX=$(pwd)/venvDir

@@ -1,0 +1,48 @@
+---
+title: "Logo"
+format: 
+  dashboard:
+    orientation: rows
+    logo: images/beetle.svg
+    nav-buttons: 
+      - icon: github
+        href: https://github.com/biscotty666/QuartoNew
+        aria-label: GitHub
+---
+
+```{r}
+library(ggplot2)
+```
+
+## Overview {height="30%"}
+
+### {width="30%"}
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+
+### {width="70%"}
+
+Here is the beetle
+
+![](images/beetle.svg){height=70%}
+
+## Plots {height="70%"}
+
+### Scatter {width="75%"}
+
+```{r}
+#| title: Highway vs. city mileage
+
+ggplot(mpg, aes(x = cty, y = hwy)) +
+  geom_point()
+```
+
+### Bar {width="25%"}
+
+```{r}
+#| title: Drive types
+
+ggplot(mpg, aes(x = drv)) +
+  geom_bar()
+```
+

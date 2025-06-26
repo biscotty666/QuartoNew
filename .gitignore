@@ -1,1 +1,5 @@
 src
+.Rproj.user
+.Rhistory
+.direnv
+*.Rproj
