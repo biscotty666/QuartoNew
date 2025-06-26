@@ -2,8 +2,12 @@
 title: "Olympic Games"
 format: 
   dashboard:
-    nav-buttons: [github]
-    github: https://github.com/biscotty666/RCensus
+    orientation: columns
+    nav-buttons: 
+      - icon: github
+        href: https://github.com/biscotty666/QuartoNew
+logo: images/olympics-logo.svg
+logo-alt: Olympic logo with multicolored rings
 ---
 
 ```{r}
@@ -18,7 +22,7 @@ library(gt)
 #| label: load-data
 #| message: false
 
-olympics_full <- read_csv("src/olympicdash/data/olympics.csv")
+olympics_full <- read_csv("data/olympics.csv")
 ```
 
 
@@ -41,7 +45,9 @@ olympics <- olympics_full |>
   mutate(medal = fct_relevel(medal, "Bronze", "Silver", "Gold"))
 ```
 
-## Medals by sport
+## Column - Plots
+
+### Medals by sport {height="60%"}
 
 ```{r}
 #| title: Medals by sport
@@ -71,7 +77,7 @@ olympics |>
   )
 ```
 
-## Medals by year
+### Medals by year {height="40%"}
 
 ```{r}
 #| title: Medals by year
@@ -97,7 +103,7 @@ olympics |>
   )
 ```
 
-## Medals by country
+## Column - Medals by country
 
 ```{r}
 #| title: Medals by country
