@@ -44,6 +44,7 @@
             XML
             xml2
             gpx
+            gt
             tidygeocoder
             crsuggest
             stplanr
@@ -104,6 +105,7 @@
             intake-parquet
             pooch
             fiona
+            plotnine
             plotly
             s3fs
             rasterio
@@ -121,7 +123,7 @@
             export PIP_PREFIX=$(pwd)/venvDir
             export PYTHONPATH="$PIP_PREFIX/${pkgs.python3.sitePackages}:$PYTHONPATH"
             export PATH="$PIP_PREFIX/bin:$PATH"
-            export QUARTO_PYTHON=/nix/store/2f2ymldccm86nqxlyhv76f5kjfy1h265-python3-3.12.9-env/bin/python
+            export QUARTO_PYTHON=/nix/store/zb5dxm4b9kv96gjfsisw88shbv0k1igc-python3-3.12.10-env/bin/python
             unset SOURCE_DATE_EPOCH
             #jupyter lab
         '';
